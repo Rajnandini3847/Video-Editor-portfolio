@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './Hero';
 import Clients from './Clients';
 import ComparisonSection from './ComparisonSection';
+import Footer from './Footer';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <Clients />
       <ComparisonSection />
+      <Footer />
     </div>
   );
 }

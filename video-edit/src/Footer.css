@@ -1,0 +1,76 @@
+/* Wrapper to center the footer on a greyish background */
+.footer-wrapper {
+    background: linear-gradient(#e0e0e0, #fff); /* Greyish-white background */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+    
+  }
+  
+/* Main footer box */
+.footer-container {
+    background-color: #0c0101; /* Black box */
+    padding: 30px 60px; /* Increased padding for better spacing */
+    color: white;
+    border-radius: 30px; /* Rounded corners */
+    width: 850px; /* Increased width to match design */
+    display: flex;
+    justify-content: space-between; /* Proper spacing between content */
+    align-items: center; /* Vertical centering */
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Softer shadow */
+}
+  
+.brand-section {
+    flex: 1; /* Take available space */
+    margin-right: 20px;
+}
+  
+.logo {
+    width: 200px; /* Slightly larger logo */
+    margin-bottom: 10px;
+}
+
+.production-text {
+    font-size: 20px;
+    font-weight: bold; /* Bolder text */
+    color: white;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #ccc;
+    font-size: 16px; /* Increased font size */
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Contact section */
+.contact-section {
+    flex: 1; /* Take available space */
+    text-align: left;
+}
+
+.contact-section h3 {
+    font-size: 22px;
+    font-weight: bold; /* Bolder text */
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    font-weight: 500; /* Medium-bold */
+    margin: 5px 0;
+}
+
+/* Social media icons */
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+}
