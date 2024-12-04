@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './Hero';
 import Clients from './Clients';
+import ComparisonSection from './ComparisonSection';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="app">
       <Hero />
       <Clients />
+      <ComparisonSection />
     </div>
   );
 }
