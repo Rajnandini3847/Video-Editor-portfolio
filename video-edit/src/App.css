@@ -1,39 +1,39 @@
-.App {
-  text-align: center;
-  margin: 10;
+/* Resetting margin and padding on body and App */
+body, .App {
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+  box-sizing: border-box; /* Ensures padding and borders don't cause overflow */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Ensure App-header doesn't have extra margin/padding */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0; /* Remove any margins */
+  padding: 0; /* Remove any paddings */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Media Queries for Responsiveness */
+@media (max-width: 480px) {
+  .hero {
+    padding: 1rem; /* Adjust padding for mobile screens */
+    margin: 0; /* Ensure no margin on the sides */
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero-content, .hero-video {
+    margin: 0; /* Remove margin on both sides */
+    padding: 0; /* Remove any padding */
+  }
+
+  .App-header {
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Ensure no margin */
+  }
+
+  /* Additional fixes if required */
+  .hero-video {
+    max-width: 100%; /* Full width video on mobile */
+  }
+
+  .hero-content {
+    text-align: center; /* Center content on small screens */
   }
 }

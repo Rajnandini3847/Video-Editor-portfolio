@@ -18,7 +18,7 @@ const Work = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000, // Set a slower speed (in milliseconds)
+        autoplaySpeed: 3000, // Set a slower speed (in milliseconds)
         cssEase: 'linear',
         centerMode: true,
         variableWidth: true,

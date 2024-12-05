@@ -1,52 +1,25 @@
 import React from 'react';
+import './Hero.css'; // External CSS file for styling
 
 const Hero = () => {
   return (
-    <div style={styles.hero}>
-      <div style={styles.heroVideo}>
-        
-        <video autoPlay loop muted style={{ width: '100%', height: 'auto' }}>
+    <div className="hero">
+      <div className="hero-video">
+        <video autoPlay loop muted className="hero-video-element">
           <source src="/path/to/your/video.mp4" type="video/mp4" />
         </video>
       </div>
-      <div style={styles.heroContent}>
-        
-        <h1 style={{ margin: 0 }}>Why Your Content Isn't Connecting</h1>
-        <ul style={{ padding: 0, listStyle: 'none' }}>
-          <li>Feels Flat?</li>
-          <li>Not Representing Your Brand?</li>
-          <li>Need a Fresh Perspective?</li>
+      <div className="hero-content">
+        <h1 className="hero-title">Why Your Content Isn't Connecting</h1>
+        <ul className="hero-list">
+          <li className="hero-list-item">Feels Flat?</li>
+          <li className="hero-list-item">Not Representing Your Brand?</li>
+          <li className="hero-list-item">Need a Fresh Perspective?</li>
         </ul>
-        <button style={styles.ctaButton}>Book a free call...</button>
+        <button className="cta-button">Book a free call...</button>
       </div>
     </div>
   );
-};
-
-const styles = {
-  hero: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '2rem',
-  },
-  heroVideo: {
-    flex: 1,
-    maxWidth: '50%',
-  },
-  heroContent: {
-    flex: 1,
-    paddingLeft: '2rem',
-  },
-  ctaButton: {
-    backgroundColor: '#ff3b30',
-    color: '#fff',
-    border: 'none',
-    padding: '0.8rem 1.5rem',
-    borderRadius: '4px',
-    fontSize: '1rem',
-    cursor: 'pointer',
-  },
 };
 
 export default Hero;

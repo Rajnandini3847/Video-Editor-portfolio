@@ -1,0 +1,189 @@
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    height: 70vh;
+    background-image: url('backHero.png');
+    background-size: cover; /* Ensures the background covers the whole area */
+    background-position: center; /* Centers the background image */
+    color: #fff; /* To ensure text is readable */
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+    position: relative;
+  }
+  
+  /* Video Section */
+  .hero-video {
+    flex: 1;
+    max-width: 35%;
+    margin-left: 110px;
+    z-index: 2; /* Ensures content is above overlay */
+    border-right: 10px solid #ffcc00; /* Adds the yellow border to the right */
+    border-bottom: 10px solid #ffcc00; /* Adds the yellow border to the bottom */
+    border-radius: 8px; /* Optional: If you want rounded corners on the video */
+  }
+  
+  .hero-video-element {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Content Section */
+  .hero-content {
+    margin-left: 50px;
+    flex: 1;
+    padding-left: 2rem;
+    z-index: 2;
+    position: relative;
+  }
+  
+  /* Title Styling */
+  .hero-title {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    color: #000000;
+  }
+  
+  /* List Styling */
+  .hero-list {
+    padding: 0;
+    list-style: none;
+    margin: 1rem 0;
+  }
+  
+  .hero-list-item {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+  }
+  
+  ul.hero-list li::before {
+    content: '\2605'; /* Unicode for a filled star (★) */
+    color: #ffcc00; /* Color of the star */
+    font-size: 2rem; /* Size of the star */
+    margin-right: 10px; /* Space between the star and the list text */
+    position: relative; /* To fine-tune the positioning */
+    top: 3px; /* Adjust the position to align with the text */
+  }
+  
+  /* Button Styling */
+  .cta-button {
+    background-color: #ff3b30;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e22c20;
+    transform: scale(1.05);
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* For devices with a width less than or equal to 1024px (Laptops and below) */
+  @media screen and (max-width: 1024px) {
+    .hero {
+      flex-direction: column; /* Stacks video and content vertically */
+      padding: 1.5rem; /* Reduce padding */
+      height: auto; /* Adjust height */
+    }
+  
+    .hero-video {
+      max-width: 80%; /* Reduces video size */
+      margin-bottom: 2rem; /* Adds space between video and content */
+    }
+  
+    .hero-content {
+      padding-left: 0;
+      text-align: center; /* Centers content on smaller screens */
+      margin-left: 0; /* Removes left margin */
+    }
+  
+    .hero-title {
+      font-size: 2.5rem; /* Smaller title */
+    }
+  
+    .hero-list-item {
+      font-size: 1rem; /* Smaller font size for list items */
+    }
+  
+    .cta-button {
+      padding: 0.6rem 1.2rem; /* Smaller button size */
+      font-size: 0.9rem; /* Adjust font size */
+    }
+  }
+  
+  /* For devices with a width less than or equal to 768px (Tablets and below) */
+  @media screen and (max-width: 768px) {
+    .hero {
+      flex-direction: column; /* Stacks video and content vertically */
+      padding: 1.5rem; /* Reduces padding */
+      height: auto; /* Adjusts height for smaller screens */
+    }
+  
+    .hero-video {
+      max-width: 90%; /* Full width video on tablets */
+      margin-bottom: 2rem; /* Adds space between video and content */
+    }
+  
+    .hero-content {
+      padding-left: 0;
+      text-align: center; /* Centers content on smaller screens */
+    }
+  
+    .hero-title {
+      font-size: 2.3rem; /* Smaller title */
+    }
+  
+    .hero-list-item {
+      font-size: 1rem; /* Smaller font size for list items */
+    }
+  
+    .cta-button {
+      padding: 0.6rem 1.2rem; /* Smaller button size */
+      font-size: 0.9rem; /* Adjust font size */
+    }
+  }
+  
+  /* For devices with a width less than or equal to 480px (Mobile phones) */
+  /* For devices with a width less than or equal to 480px (Mobile phones) */
+@media screen and (max-width: 480px) {
+    .hero {
+      padding: 1rem; /* Reduce padding to eliminate excess space */
+      margin: 0; /* Ensure no margin on the sides */
+    }
+  
+    /* You can also apply this to the parent container if needed */
+    .hero-content, .hero-video {
+      margin-right: 0; /* Remove margin-right */
+      padding-right: 0; /* Remove any right padding */
+    }
+  
+    /* Adjust the video and content sections to fit within the screen */
+    .hero-video {
+      max-width: 100%; /* Ensure the video uses the full width */
+    }
+    
+    .hero-content {
+      padding-left: 0;
+      text-align: center;
+      margin-left: 0; /* Removes left margin */
+    }
+  
+    /* Adjust button size for mobile */
+    .cta-button {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
+  }
+  
+  

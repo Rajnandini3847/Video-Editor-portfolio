@@ -6,8 +6,8 @@ function Footer() {
     <div className="footer-wrapper">
       <div className="footer-container">
         <div className="brand-section">
-          <img src="/assets/editopia-logo.png" alt="Editopia Logo" className="logo" />
-          <p className="production-text">PRODUCTION</p>
+          <img src="3.png" alt="Editopia Logo" className="logo" />
+          
           <p className="description">
             Editopia Production is a content production company that helps brands and businesses to create the most compelling content.
           </p>

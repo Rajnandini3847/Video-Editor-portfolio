@@ -1,0 +1,69 @@
+.clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 70px;  /* Set left and right padding similar to .work-slider */
+    background-color: black;
+    position: relative; /* To position the pseudo-elements */
+  }
+  
+  .clients-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Adjust width for better responsiveness */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .client-logo {
+    flex-shrink: 0;
+    margin-right: 0.25rem; /* Reduced space between logos */
+  }
+  
+  .client-logo-img {
+    height: 150px; /* Increased size */
+    width: 150px; /* Increased size */
+    border-radius: 50%;
+  }
+  
+  /* Pseudo-elements for the blur effect on the left and right borders */
+  .clients::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+    z-index: 1;
+  }
+  
+  .clients::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1), transparent);
+    z-index: 1;
+  }
+  
+
+  /* Media query for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+    .clients {
+      padding: 20px 30px; /* Reduced padding on smaller screens */
+    }
+  
+    .clients-carousel {
+      width: 100%; /* Ensures the carousel takes full width */
+    }
+  
+    .client-logo-img {
+      height: 120px; /* Smaller logo size on mobile */
+      width: 120px; /* Smaller logo size on mobile */
+    }
+  }
+  

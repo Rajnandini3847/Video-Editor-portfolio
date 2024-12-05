@@ -1,112 +1,233 @@
 .comparison-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    font-family: Arial, sans-serif;
-    margin-bottom: 300px;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  font-family: Arial, sans-serif;
+  margin-bottom: 300px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 4.0rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  flex-grow: 1;
+}
+
+.negative {
+  color: #ff4444;
+  margin: 0 0.5rem;
+}
+
+.positive {
+  color: #2196f3;
+  margin: 0 0.5rem;
+}
+
+.toggle-button {
+  width: 60px;
+  height: 32px;
+  background-color: #e0e0e0;
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.slider {
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slider.active {
+  left: 30px;
+  background-color: #2196f3;
+}
+
+.cta-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.95rem 2.0rem;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.item {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  padding: 1.8rem;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden; /* Ensures content stays within the rounded borders */
+}
+
+.item:hover {
+  transform: translateY(-10px); /* Lift card on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+  background: linear-gradient(135deg, #e0e0e0, #ffffff); /* Lighten background on hover */
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.item p {
+  font-size: 1.0rem;
+  color: #666;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.item:hover .icon {
+  color: #2196f3; /* Change icon color on hover */
+}
+
+.item:hover h3 {
+  color: #2196f3; /* Change title color on hover */
+}
+
+.item:hover p {
+  color: #333; /* Darker text for paragraph on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  /* For tablets and smaller screens */
   .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3rem;
-  }
-  
-  h2 {
-    font-size: 4.0rem;
-    font-weight: 600;
-    line-height: 1.2;
-    text-align: left;
-    margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    flex-grow: 1;
-  }
-  
-  .negative {
-    color: #ff4444;
-    margin: 0 0.5rem;
-  }
-  
-  .positive {
-    color: #2196f3;
-    margin: 0 0.5rem;
-  }
-  
-  .toggle-button {
-    width: 60px;
-    height: 32px;
-    background-color: #e0e0e0;
-    border-radius: 16px;
-    position: relative;
-    cursor: pointer;
-    border: none;
-    margin: 0 1rem;
-    padding: 0;
-  }
-  
-  .slider {
-    width: 28px;
-    height: 28px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .slider.active {
-    left: 30px;
-    background-color: #2196f3;
-  }
-  
-  .cta-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 0.95rem 2.0rem;
-    font-size: 1.1rem;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  
-  .items-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-  
-  .item {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: left;
-    
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      flex-direction: column;
+      align-items: flex-start;
   }
 
- 
-  
+  h2 {
+      font-size: 2.5rem;
+      text-align: left;
+      margin-bottom: 1rem;
+  }
+
+  .items-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+  }
+
+  .cta-button {
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+  }
+
   .icon {
-    font-size: 2.1rem;
-    margin-bottom: 1rem;
-    color: #333;
+      font-size: 1.8rem;
   }
-  
+
   .item h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    color: #333;
+      font-size: 1.1rem;
   }
-  
+
   .item p {
-    font-size: 1.0rem;
-    color: #666;
-    line-height: 1.4;
-    
+      font-size: 0.9rem;
   }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+  }
+
+  .items-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+
+  .cta-button {
+      font-size: 0.9rem;
+      padding: 0.8rem 1.2rem;
+  }
+
+  .icon {
+      font-size: 1.6rem;
+  }
+
+  .item h3 {
+      font-size: 1.0rem;
+  }
+
+  .item p {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 1rem;
+  }
+
+  .items-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+
+  .cta-button {
+      font-size: 0.8rem;
+      padding: 0.7rem 1.0rem;
+  }
+
+  .icon {
+      font-size: 1.4rem;
+  }
+
+  .item h3 {
+      font-size: 1.0rem;
+  }
+
+  .item p {
+      font-size: 0.8rem;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
+import './Clients.css';
 
 const Clients = () => {
   const clientLogos = useMemo(() => [
@@ -25,44 +26,23 @@ const Clients = () => {
   }, [clientLogos, currentIndex]);
 
   return (
-    <div style={styles.clients}>
-      <div ref={carouselRef} style={styles.clientsCarousel}>
+    <div className="clients">
+      <div ref={carouselRef} className="clients-carousel">
         {clientLogos.map((logo, index) => (
           <div
             key={index}
+            className="client-logo"
             style={{
-              ...styles.clientLogo,
               transform: `translateX(${(index - currentIndex) * 100 - 100}%)`,
               transition: 'transform 2s ease-in-out',
             }}
           >
-            <img src={logo} alt={`Client ${index + 1}`} style={{ height: '180px', width: '180px', borderRadius: '70%' }} />
+            <img src={logo} alt={`Client ${index + 1}`} className="client-logo-img" />
           </div>
         ))}
       </div>
     </div>
   );
-};
-
-const styles = {
-  clients: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '2rem',
-    backgroundColor: 'black',
-  },
-  clientsCarousel: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    overflow: 'hidden',
-  },
-  clientLogo: {
-    flexShrink: 0,
-    marginRight: '1rem',
-  },
 };
 
 export default Clients;

@@ -1,53 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 /* Container styling */
 .work-section {
-    background-color: #111;
-    padding: 40px 0;
-    text-align: center;
+  background-color: #000000;
+  padding: 40px 0;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/* Heading styling */
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 140px;
+  margin-right: 190px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* Title styling */
+.work-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  color: #e8e8e8;
+  margin-bottom: 20px;
+}
+
+/* Button with shadow and hover effect */
+.button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: yellow;
+  background: none;
+  border: 2px solid yellow;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 15px rgba(255, 255, 0, 0.6); /* Soft yellow shadow */
+}
+
+.button:hover {
+  background-color: yellow;
+  color: black;
+  box-shadow: 0px 6px 20px rgba(255, 255, 0, 0.6); /* Stronger shadow on hover */
+}
+
+/* Carousel styling */
+.work-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+  padding: 0 20px;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Blur effect on left and right sides */
+.work-slider::before,
+.work-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px; /* Width of the blur */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.work-slider::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+}
+
+.work-slider::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), transparent);
+}
+
+/* Video container */
+.video-container {
+  padding: 0 10px;
+}
+
+/* YouTube iframe */
+.work-video {
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  /* For Tablets and Smaller Screens */
+  .heading {
+    margin-left: 50px;
+    margin-right: 50px;
   }
-  .heading{
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  /* Title styling */
+
   .work-title {
-    font-family: 'Bukagi', sans-serif;
-    font-size: 40px;
-    color: #e8e8e8;
-    margin-bottom: 20px;
+    font-size: 40px; /* Slightly smaller title for tablets */
   }
-  
+
   .button {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color: yellow;
-    background: none;
-    border: 2px solid yellow;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+    font-size: 18px; /* Smaller font size on smaller screens */
+    padding: 5px 10px; /* Adjust padding */
   }
-  
-  /* Carousel styling */
+
   .work-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    overflow: hidden;
-    padding: 0 20px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
-  
-  /* Video container */
-  .video-container {
-    padding: 0 10px;
-  }
-  
-  /* YouTube iframe */
+
   .work-video {
-    width: 300px;
-    height: 400px; /* Reduced height */
-    border-radius: 10px;
-    border: none;
+    width: 250px;
+    height: 350px;
   }
-  
+}
+
+@media (max-width: 768px) {
+  /* For Mobile Screens */
+  .heading {
+    flex-direction: column; /* Stack heading items vertically */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .work-title {
+    font-size: 30px; /* Smaller title for mobile */
+  }
+
+  .button {
+    font-size: 16px; /* Smaller button text */
+    padding: 5px 10px; /* Adjust padding for mobile */
+  }
+
+  .work-slider {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .work-video {
+    width: 100%; /* Make video take full width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Limit height for better fit */
+    margin-bottom: 20px; /* Space below the video */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For Very Small Mobile Screens */
+  .work-title {
+    font-size: 25px; /* Further decrease title size */
+  }
+
+  .button {
+    font-size: 14px; /* Even smaller button text */
+    padding: 4px 8px; /* Reduce button size */
+  }
+
+  .work-slider {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .work-video {
+    width: 100%; /* Full width video */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Limit height for very small screens */
+  }
+}
